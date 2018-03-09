@@ -11,11 +11,9 @@ import java.time.LocalDateTime;
 public class SimpleWebApplication {
 
     public static void main(String[] args) {
+        initRepository();
         SpringApplication.run(SimpleWebApplication.class, args);
     }
-
-    initRepository();
-    SpringApplication.run(SimpleWebApplication.class, args);
 
     private static void initRepository() {
         BlogRepository.add(new BlogEntry(
@@ -25,7 +23,6 @@ public class SimpleWebApplication {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
 
         ));
-
         BlogRepository.add(new BlogEntry(
                 "Title #2",
                 "Author #2",
